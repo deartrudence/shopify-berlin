@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/shopify-berlin`,
   siteMetadata: {
     title: `Shopify Theme Development: Beyond the Basics`
   },
@@ -26,3 +27,4 @@ module.exports = {
     }
   ]
 }
+

@@ -22,7 +22,7 @@ export default ({ children, data }) =>
                 color={`#173EFB`}
                 font-family={`oswald`}
                 font-weight={`bold`}
-                font-size={`60px`}
+                font-size={`7vw`}
             >
                 {data.site.siteMetadata.title}
 
