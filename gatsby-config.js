@@ -4,6 +4,12 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`oswald`]
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,

@@ -15,14 +15,18 @@ export default ({ children, data }) =>
         paddingTop={rhythm(1.5)}
     >
         <Link to={`/`}>
-            <g.H3
+            <g.H1
                 marginBottom={rhythm(2)}
                 display={`inline-block`}
                 fontStyle={`normal`}
+                color={`#173EFB`}
+                font-family={`oswald`}
+                font-weight={`bold`}
+                font-size={`60px`}
             >
                 {data.site.siteMetadata.title}
 
-            </g.H3>
+            </g.H1>
         </Link>
         {children()}
     </g.Div>

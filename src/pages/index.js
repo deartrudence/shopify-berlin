@@ -8,9 +8,9 @@ export default ({ data }) => {
     console.log(data)
     return (
         <div>
-            < g.H1 display={"inline-block"} borderBottom={"1px solid"}>
-                Topics we'll be covering
-            </g.H1>
+            < g.H2 display={"inline-block"} >
+                aimed at introducing partners and developers to new and advanced features in the Shopify theme development ecosystem.
+            </g.H2>
             {data.allMarkdownRemark.edges.map(({ node }) => (
                 <div key={node.id}>
                     <Link
