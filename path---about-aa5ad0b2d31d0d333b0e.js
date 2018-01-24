@@ -1,0 +1,2 @@
+webpackJsonp([0xf927f8900006],{493:function(e,t){e.exports={data:{site:{siteMetadata:{title:"Shopify Theme Development: Beyond the Basics"}}},pathContext:{}}}});
+//# sourceMappingURL=path---about-aa5ad0b2d31d0d333b0e.js.map
