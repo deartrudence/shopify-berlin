@@ -358,7 +358,7 @@ This has the added advantage of being variable based on the collection chosen as
 
  If you have played around with metafield editor extensions, explored shortcodes, and created content editing Shopify apps you may be a part of a group wondering - how can you give the shop owner more control over shop customization and still maintain an intuitive admin system. We've got one word for you: Sections.
 
-🔥 TIP - more and more themes in the Shopify Theme Store support sections. If you are looking to get into theme development, building out themes with modular customizable sections is a great direction to head in!
+🔥 TIP - As of now all the themes in the Shopify Theme Store support sections. If you are looking to get into theme development, building out themes with modular customizable sections is required.
 
 ### Why Sections
 Sections answer a lot of development and end user requests. They allow you to create reusable templates that the shop owner can continuously add and re-arrange. Sections are also a great tool for uploading and displaying additional media content. For example, on the collection, where you are limited to one featured image, you can create a highly customizable image gallery of product looks. Moreover, they offer a wonderfully integrated and streamlined user interface for the shop owner to interact with.

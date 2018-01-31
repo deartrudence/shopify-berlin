@@ -10,7 +10,7 @@ export default ({ data }) => {
     return (
         <div>
             < g.H2 display={"inline-block"} >
-                aimed at introducing partners and developers to new and advanced features in the Shopify theme development ecosystem.
+                Aimed at introducing partners and developers to new and advanced features in the Shopify theme development ecosystem.
             </g.H2>
             {data.allMarkdownRemark.edges.map(({ node }) => (
                 <div key={node.id}>

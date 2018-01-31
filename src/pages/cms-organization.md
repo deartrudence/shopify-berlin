@@ -119,11 +119,11 @@ Liquid filters are like **Methods** that can be performed on Shopify Objects and
 
 #### Scaffolding a theme with Slate
 
-There have been a couple of different tools for local Shopify Development. There are some great desktop GUIs that have been developed to facilitate local dev for example Motifmate which has a monthly subscription fee. There are also command line tools, some common ones include the **theme gem** and **themekit**. Today we are going to be setting up one such command line tool developed by Shopify called Slate. Slate provides the ability to generate a paired down scaffolded Shopify theme as well as a command line tool for local theme development, today we will focus on the latter. Check out the [Slate Documentation](https://shopify.github.io/slate/).
+There have been a couple of different tools for local Shopify Development. There are some great desktop GUIs that have been developed to facilitate local dev for example Motifmate which has a monthly subscription fee. There are also command line tools, some common ones include the **theme gem** and **themekit**. We really like using the command line tool developed by Shopify called Slate. Slate provides the ability to generate a paired down scaffolded Shopify theme as well as a command line tool for local theme development, today we will focus on the latter. Check out the [Slate Documentation](https://shopify.github.io/slate/).
 
 #### Slate Installation
 
-Let's go ahead and install slate on our computers so we can start using it for our theme development. Slate works on Linux, WIndows, and OSX. We are going to use **npm** to install Slate so make sure you have that installed before running the Slate install command. Open a terminal window and run the following command:
+Slate works on Linux, Windows, and OSX. We use **npm** to install Slate so make sure you have that installed before running the Slate install command. Open a terminal window and run the following command:
 
 `npm install -g @shopify/slate`
 
@@ -137,13 +137,13 @@ and you should see a version number associated with your installed version of Sl
 
 #### Slate Theme Scaffold
 
-Once slate has been installed globally, we'll want to move into the directory where we want to create the theme files in our terminal.  Once there we'll want to run the following command (where [name] is replaced by the whatever you'd like to name your theme):
+Once slate has been installed globally, you'll want to move into the directory where we want to create the theme files in our terminal.  Once there you'll want to run the following command (where [name] is replaced by the whatever you'd like to name your theme):
 
 `slate theme [name]`
 
 When it's finished running you'll see the line ` [name] theme is ready`.  At that point you can move into that directory to see all the files slate has generated.  It might be easiest to open it up into your text editor.
 
-All of Slate’s source theme files are in the root **src** directory. These are the files we will be editing. Using Slate commands, we compile to the theme into the **dist** directory. In order for us to be able to upload our themes, we use the build command or zip commands.
+All of Slate’s source theme files are in the root **src** directory. These are the files you will be editing. Use Slate commands to compile the theme into the **dist** directory. In order for to be able to upload our themes, use the build and zip commands.
 
 Running the following command will compile all of your changes into the **dist** folder.  You'll notice that since this is a new theme there is no **dist** folder to begin with.  This command will also create it.
 
@@ -155,11 +155,13 @@ We need to zip the files in order to be able to upload the theme to our Shopify 
 
 The zipped version of your theme can be found in the **upload** folder.
 
-To upload the theme, we now go back to the Shopify store admin to **online store** , scroll down a bit and there's a button to **upload theme**.  Click that and upload the zipped version of the theme.  When it's upload, click on actions then publish.
+To upload the theme, go back to the Shopify store admin to **online store** , scroll down a bit and there's a button to **upload theme**.  Click that and upload the zipped version of the theme.  When it's upload, click on actions then publish.
+
+#### Navigating Slate
 
 Everthing we'll be doing in th Slate files will be in be in the **src** folder (with the exception of updating the config.yml file one time).  The **dist** folder is where all the transpiled and processed code lives.  So from here on out, file references will assume to be in the **src** folder.
 
-The first place we want to start when jumping into slate is the `layout > theme.liquid`.  This is the wrapper for the site.  You'll notice the <head> tag here.   All the usual information one would put in the <head>.  We won't go through all the details, but will point out a few notable things.
+The first place we want to start when jumping into slate is the `layout > theme.liquid`.  This is the wrapper for the site.  You'll notice the `<head>` tag here.   All the usual information one would put in the `<head>`.  We won't go through all the details, but will point out a few notable things.
 
 `{% include 'social-meta-tags' %}`
 
@@ -191,7 +193,7 @@ This brings us the the **Homepage**.
 
 `templates > index.liquid` is the template for the Homepage.   You'll notice that when you get there all you'll see is `{{ content_for_index }}`.
 
-This contains the content of dynamic sections to rendered on the homepage.  Slate builds these sections out for you for the homepage.  We will be going into how to create your own sections in the advanced course.  For now, we'll just go to the online theme editor to see how we can customize them for there.
+This contains the content of dynamic sections to be rendered on the homepage.  Slate builds these sections out for you for the homepage.  We will be going into how to create your own sections in the advanced course.  For now, we'll just go to the online theme editor to see how we can customize them for there.
 
 
 #### Slate and Javascript

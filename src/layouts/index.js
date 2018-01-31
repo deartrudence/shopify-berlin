@@ -20,9 +20,9 @@ export default ({ children, data }) =>
                 display={`inline-block`}
                 fontStyle={`normal`}
                 color={`#173EFB`}
-                font-family={`oswald`}
-                font-weight={`bold`}
-                font-size={`7vw`}
+                fontFamily={`oswald`}
+                fontWeight={`bold`}
+                fontSize={`7vw`}
             >
                 {data.site.siteMetadata.title}
 

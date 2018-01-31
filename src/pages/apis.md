@@ -3,7 +3,6 @@ title: "APIs"
 date: "2017-08-02"
 ---
 
-## JavaScript SDK
 The Buy Button Channel provides three ways to sell products outside of the shopify online store that we will discuss below. These can add further sales opportunities and complement your already existing Shopify store. Also, if you don’t have a full online store and/or you only want to sell a few products on a site that already exists, you can even get a pared down version of Shopify that is only $9 per month and use just the Buy Button Channel.
 
 Going to `SALES CHANNEL > Buy Button` will bring you to the 3 options:
@@ -24,131 +23,6 @@ The buy button provides a lot of options for customization, but you might find t
 
 The API allows you to pull products into your site, create a cart experience and insert a link to the Shopify checkout.
 
-## Why use the Shopify SDK?
-
-The Shopify Buy Button gives you a lot of flexibility in the look and feel and functionality of what you embed into your site.  So why use the Shopify SDK?
-
-Well, the programmers at Shopify found that they had a lot of people wanting finer tuned control over what they could do.  So much so, that they felt it was worth creating this SDK.
-
-One example, is a client wanted to have a product on another website, but when they went to buy, instead of using the Buy Button cart, they wanted the client to be taken to the full store and have the item they chose included in the stores cart (each buy button experience creates it's own cart).  The client wanted this to encourage the purchase of more products.  A solution to this would not be possible with the Buy Button alone.  With the SDK, however, the client could sub in a link to the store with the product as a parameter, once inside the store, could use the parameter and the Ajax API to update the stores cart.
-
-Creating these very unique experiences really allows store owners to set themselves apart and create seamless experiences for their shoppers, hopefully leading to increased sales.
-
-## What can the Shopify SDK do?
-
-* fetch information about a single product or a collection of products
-* create a shopping cart
-* allow customers to select options and quantities
-* generate a checkout URL for a single product or an entire cart.
-
-## The JavaScript SDK Basics
-
-**1.  Create a Shop Client**
-
-The Client is the primary interface through which you make requests using the JS Buy SDK.
-
-**2.  Make a Request for Product(s)**
-
-You can now call a fetch method on your client to retrieve products or collections
-Create a Cart
-
-**3.  Create a Cart or Go to Checkout**
-
-You can also create a cart, add products to the card and generate a link for that cart to go to the Shopify checkout
-
-### shopify-buy Module Classes
-
-Shopify provides a bunch of utilities for certain actions and accessing info.  They have a great reference [here](http://shopify.github.io/js-buy-sdk/)
-
- * **ShopifyBuy**
-	 * ShopifyBuy only defines one function **buildClient** which can be used to build a ShopClient to query your store using the provided **apiKey** , **appId**, and **domain**. Returns a client for the shop using your api credentials which you can use to query your store.
-	 * METHOD
-		 * buildClient
- * **ShopClient**
-	 * Once the ShopClient has been build, then the following methods can be run on that client
-		 * createCart
-		 * fetchAllCollections
-		 * fetchAllProducts
-		 * fetchCart
-		 * fetchCollection
-		 * fetchProduct
-		 * fetchQueryCollections
-		 * fetchQueryProducts
-		 * fetchRecentCart
- * **ProductModel**
-	 *  **Class** for products returned by fetch('product').  Allows access to the properties of the Product
-	 *  PROPERTIES
-		 *  Description
-		 *  Id
-		 *  Images
-		 *  Options
-		 *  selectedVariant
-		 *  selectedVariantImage
-		 *  Selections
-		 *  Title
-		 *  Variants
- *  **ProductVariantModel**
-	 *  **Model** for product variant.  Allows access to variant properties.  It also provides a method **checkoutUrl** to get a checkout url for a specific product variant.  You can optionally pass a quantity.  If no quantity is passed the it will default to 1.
-	 *  METHODS
-		 *  checkoutUrl
-	 *  PROPERTIES
-		 *  available
-		 *  compareAtPrice
-		 *  formattedPrice
-		 *  grams
-		 *  id
-		 *  image
-		 *  imageVariant
-		 *  optionValues
-		 *  price
-		 *  productId
-		 *  productTitle
-		 *  title
- *  **ProductOptionModel**
-	 *  **Class** for product option.  Allows access to product option properties.
-		 *  name
-		 *  selected
-		 *  values
- *  **CartModel**
-	 *  **Class** for the cart model.  Provides methods and properties for the cart.
-	 *  METHODS
-		 *  clearLineItems
-		 *  createLineItemsFromVariants
-		 *  removeLineItem
-		 *  updateLineItem
-		 *  updateModel
-	 *  PROPERTIES
-		 *  checkoutUrl
-		 *  id
-		 *  lineItemCount
-		 *  lineItems
-		 *  subtotal
- *  **CartLineItemModel**
-	 *  A cart stores an Array of CartLineItemModel's in it's lineItems property. The following are properties available on each lineItem.
-	 *  PROPERTIES
-		 *  compareAtPrice
-			* grams
-			* id
-			* image
-			* line\_price
-			* price
-			* product\_id
-			* quantity
-			* title
-			* variant\_id
-			* variant\_title
-
-### The Setup
-
-In order to be able to access all these properties and methods, Shopify provides a JavaScript SDK CDN that can be brought into any website you are working on.
-
-	<script src="http://sdks.shopifycdn.com/js-buy-sdk/v0/latest/shopify-buy.umd.polyfilled.min.js"></script>
-	
-We'll also be bringing a jQuery CDN in order to manipulate the DOM using jQuery.
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	
-Once those two scripts are added to your website, you have the power to access everything available to start putting products on the page.
 
 ## Admin API
 
@@ -294,3 +168,12 @@ Draft orders allow merchants to create orders on behalf of customers. This is us
 
 	
 ## Storefront API
+
+The Storefront API is a Graphql API that allows you to build full store experiences outside of the Shopify standard templating.  Though the JavaScript SDK is still available, this is what Shopify will be encouraging going forward for this purpose.  You can learn more from the docs [here](https://help.shopify.com/api/storefront-api/reference)
+
+Using the Storefront API, you can:
+
+* Fetch data about a single product or a collection of products to display on any website or device.
+* Create unique checkout experiences with full control over the shopping cart.
+* Create new customers or modify existing ones, including address information.
+* Allow customers to select unique product options.
